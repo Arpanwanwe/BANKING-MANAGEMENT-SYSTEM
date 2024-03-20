@@ -1,163 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Bank-Dashboard</title>
-    <!-- coustom style -->
-    <link rel="stylesheet" href="style/style.css" />
-    <!-- tailwind  -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="max-w-4xl mx-auto">
-    <!-- The navigation menu -->
-<div class="navbar">
-  <a class="active" href="#">Home</a>
-  <a href="mailto:Webioserver@gmail.com">New Registration</a>
-  <a href="https://www.linkedin.com/in/arpan-wanve-208b1b22a">Contact</a>
-  <a href="/index.html">Log Out</a>
-</div><!-- header section  -->
-    <header>
-      <section>
-        <h1
-          class="text-2xl sm:text-3xl md:text-4xl text-green-500 text-center mt-16 mb-8 font-semibold"
-        >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Bank-Dashboard</title>
+  <!-- coustom style -->
+  <link rel="stylesheet" href="style.css">
+  <!-- tailwind  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- The navigation menu -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="FINRECORD FINAL LOGO.png" alt=";logo">
+    </div>
+    <ul class="nav-sec">
+      <li><a class="active" href="bank.html">Cash Manager</a></li>
+      <li><a href="#">Loan Calculator</a></li>
+      <li><a href="#">Schema's info</a></li>
+      <li><a href="#">New Enrollment</a></li>
+      <li><a href="/index.html">Log Out</a></li>
+    </ul>
+  </div><!-- header section  -->
+  <header class="max-w-4xl mx-auto">
+    <section>
+      <h1 class="text-2xl sm:text-3xl md:text-4xl text-green-500 text-center mt-16 mb-8 font-semibold">
         Welcome, User
-        </h1>
-      </section>
-    </header>
-    <!-- main section -->
-    <main>
-      <div class="user-information text-center text-sm sm:text-xl mb-8">
-        <p>Please Note that This information is not Getting Stored on this Portal so please make sure to Print this Page Before Refreshing the Page</p>
-      </div>
-      <section
-        class="bg-slate-300 w-11/12 rounded-md mx-auto p-6 sm:p-10 md:p-12"
-      >
-        <div
-          class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white text-center sm:text-left"
-        >
-          <div class="bg-violet-900 px-4 py-4">
-            <h2 class="text-md md:text-xl mb-4">Total Deposit</h2>
-            <h3 class="text-2xl md:text-3xl">
-              ₹<span id="total-diposit">00</span>
-            </h3>
-          </div>
-          <div class="bg-violet-900 px-4 py-4">
-            <h2 class="text-md md:text-xl mb-4">Total Withdraw</h2>
-            <h3 class="text-2xl md:text-3xl">
-              ₹<span id="total-withdraw">00</span>
-            </h3>
-          </div>
-          <div class="bg-violet-900 px-4 py-4">
-            <h2 class="text-md md:text-xl mb-4">Balance</h2>
-            <h3 class="text-2xl md:text-3xl">
-              ₹<span id="total-balance">00</span>
-            </h3>
-          </div>
-        </div>
-        <!-- diposit and withdraw  -->
-        <div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white mt-12">
-            <div class="bg-blue-900 px-8 py-4 rounded-md">
-              <h2 class="text-xl md:text-2xl mb-8 text-center">Deposit here</h2>
-              <input
-                id="diposit-field"
-                class="h-12 md:h-16 w-full p-4 text-black text-sm md:text-xl mb-8"
-                type="number"
-                placeholder="Enter amount"
-              />
-              <button
-                id="diposit-btn"
-                class="block text-sm sm:text-md md:text-xl p-4 mb-8 bg-emerald-500 w-full rounded-md"
-              >
-                Deposit
-              </button>
-            </div>
-            <div class="bg-blue-900 px-8 py-4 rounded-md">
-              <h2 class="text-xl md:text-2xl mb-8 text-center">
-                Withdraw here
-              </h2>
-              <input
-                id="withdraw-field"
-                class="h-12 md:h-16 w-full p-4 text-black text-sm md:text-xl mb-8"
-                type="number"
-                placeholder="Enter amount"
-              />
-              <button
-                id="withdraw-btn"
-                class="block text-sm sm:text-md md:text-xl p-4 mb-8 bg-emerald-500 w-full rounded-md"
-              >
-                Withdraw
-              </button>
-            </div>
-          </div>
-        </div>
-        <button class="block text-sm sm:text-md md:text-xl p-4 mb-8 bg-emerald-500 w-full rounded-md"onclick="window.print()">Print </button>
-      </section>
-      <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
-
-  <footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
+      </h1>
     </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+  </header>
+  <!-- main section -->
+  <main class="max-w-4xl mx-auto">
+    <div class="user-information text-center text-sm sm:text-xl mb-8">
+      <p>Please Note that This information is not Getting Stored on this Portal so please make sure to Print this Page
+        Before Refreshing the Page</p>
+    </div>
+    <section class="bg-slate-300 w-11/12 rounded-md mx-auto p-6 sm:p-10 md:p-12">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white text-center sm:text-left">
+        <div class="bg-violet-900 px-4 py-4">
+          <h2 class="text-md md:text-xl mb-4">Total Deposit</h2>
+          <h3 class="text-2xl md:text-3xl">
+            ₹<span id="total-diposit">00</span>
+          </h3>
+        </div>
+        <div class="bg-violet-900 px-4 py-4">
+          <h2 class="text-md md:text-xl mb-4">Total Withdraw</h2>
+          <h3 class="text-2xl md:text-3xl">
+            ₹<span id="total-withdraw">00</span>
+          </h3>
+        </div>
+        <div class="bg-violet-900 px-4 py-4">
+          <h2 class="text-md md:text-xl mb-4">Balance</h2>
+          <h3 class="text-2xl md:text-3xl">
+            ₹<span id="total-balance">00</span>
+          </h3>
+        </div>
+      </div>
+      <!-- diposit and withdraw  -->
+      <div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white mt-12">
+          <div class="bg-blue-900 px-8 py-4 rounded-md">
+            <h2 class="text-xl md:text-2xl mb-8 text-center">Deposit here</h2>
+            <input id="diposit-field" class="h-12 md:h-16 w-full p-4 text-black text-sm md:text-xl mb-8" type="number"
+              placeholder="Enter amount" />
+            <button id="diposit-btn"
+              class="block text-sm sm:text-md md:text-xl p-4 mb-8 bg-emerald-500 w-full rounded-md">
+              Deposit
+            </button>
+          </div>
+          <div class="bg-blue-900 px-8 py-4 rounded-md">
+            <h2 class="text-xl md:text-2xl mb-8 text-center">
+              Withdraw here
+            </h2>
+            <input id="withdraw-field" class="h-12 md:h-16 w-full p-4 text-black text-sm md:text-xl mb-8" type="number"
+              placeholder="Enter amount" />
+            <button id="withdraw-btn"
+              class="block text-sm sm:text-md md:text-xl p-4 mb-8 bg-emerald-500 w-full rounded-md">
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="block text-sm sm:text-md md:text-xl p-4 mb-8 bg-emerald-500 w-full rounded-md"
+        onclick="window.print()">Print </button>
+    </section>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container my-5">
 
-  <!-- Copyright -->
-  <div class="text-black text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 Copyright:
-    <a class="text-black" href="https://www.linkedin.com/in/arpan-wanve-208b1b22a">Arpan Wanve</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-  
-</div>
-<!-- End of .container -->
-    </main>
-    <!-- javaScript -->
-    <script src="js/diposit.js"></script>
-    <script src="js/withdraw.js"></script>
-  </body>
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-black text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-black" href="https://www.linkedin.com/in/arpan-wanve-208b1b22a">Arpan Wanve</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    </div>
+    <!-- End of .container -->
+  </main>
+  <!-- javaScript -->
+  <script src="js/diposit.js"></script>
+  <script src="js/withdraw.js"></script>
+</body>
+
 </html>
